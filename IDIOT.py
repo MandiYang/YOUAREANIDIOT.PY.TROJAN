@@ -2,7 +2,16 @@
 
 import tkinter as tk
 import random
-from PIL import ImageTk, Image
+try:
+    from PIL import ImageTk, Image
+except:
+    try:
+        import pip._internal as pipinstall
+    except:
+        import pip as pipinstall
+    pipinstall.main(['install', '--user', 'pillow'])
+       
+    
 from io import BytesIO
 import urllib.request as request
 
