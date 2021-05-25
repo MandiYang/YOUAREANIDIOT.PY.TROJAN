@@ -2,20 +2,21 @@
 
 import tkinter as tk
 import random
+import pip
 
 try:
     from PIL import ImageTk, Image
-except:
-    try:
-        import pip._internal as pipinstall
-    except:
-        import pip as pipinstall
-    pipinstall.main(['install', '--user', 'pillow'])
+except ImportError:
+    if hasattr(pip, 'main'):
+        pip.main(['install', '--user', 'pillow'])
+    else:
+        pip._internal.main(['install', '--user', 'pillow'])
     from PIL import ImageTk, Image
     
 from io import BytesIO
 import urllib.request as request
 import ssl
+
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
