@@ -1,4 +1,5 @@
-This repository is a python3 version of youareanidiot trojan with tkinter but the tk windows doesn't move and it is pretty easy to remove the trojan if you use unix operating system or a big computer screen, but it also infects .py and .pyw files if it is IDIOT.py(VIRUS),
-IDIOT.py is with .py and .pyw VIRUS infection and TROJAN.py is without infection.
+This repository is a unofficial python3 version of youareanidiot trojan and virus with tkinter. Instead of a moving window it appear infinity of tkinter windows.
 
-In the dist folder there is the image of a idiot
+In the dist folder there is the image of the image used for the trojan.
+
+### THE CODE IS ONLY FOR EDUCATION PURPOSE, DO NOT USE THIS FOR HARM.
