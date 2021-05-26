@@ -27,7 +27,7 @@ response = request.urlopen(URL, context=ctx)
 img_data = response.read()
 h=BytesIO(img_data)
 open_i=Image.open(h)
-imagen = open_i.resize((300, 300), Image.ANTIALIAS)
+imagen = open_i.resize((400, 400), Image.ANTIALIAS)
 image = ImageTk.PhotoImage(imagen)
 
 def startInfiniteLoop():
@@ -44,7 +44,7 @@ def startInfiniteLoop():
         else:
             x = random.randint(-500, 800)
         y =  random.randint(-550, 550)
-        tkl.geometry("+%d+%d" % (x + 300, y + 300))
+        tkl.geometry("+%d+%d" % (x + 400, y + 400))
         tkl.title("YOU ARE AN IDIOT!")
         label = tk.Label(tkl, image=image)
         label.pack(fill="both")
