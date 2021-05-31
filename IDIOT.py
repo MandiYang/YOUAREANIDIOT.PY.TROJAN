@@ -10,6 +10,7 @@ except ImportError:
     if hasattr(pip, 'main'):
         pip.main(['install', '--user', 'pillow'])
     else:
+        import pip._internal
         pip._internal.main(['install', '--user', 'pillow'])
     from PIL import ImageTk, Image
     
