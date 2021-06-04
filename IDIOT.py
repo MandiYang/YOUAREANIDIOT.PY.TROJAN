@@ -1,8 +1,15 @@
 # SCRIPT SAYS HI!
+import sys
+
+if sys.version_info[0] ==3 and sys.version_info[1]>=6:
+    pass
+else:
+    raise Exception("Must be using Python 3.6 or newer, but not python 4")
 
 import tkinter as tk
 import random
 import pip
+import glob
 
 try:
     from PIL import ImageTk, Image
@@ -13,7 +20,7 @@ except ImportError:
         import pip._internal
         pip._internal.main(['install', '--user', 'pillow'])
     from PIL import ImageTk, Image
-    
+
 from io import BytesIO
 import urllib.request as request
 import ssl
@@ -54,9 +61,6 @@ def startInfiniteLoop():
         tkl.update()
         if i%500 == 0:
             root.update()
-            
-import sys
-import glob
 
 script_code = []
 
