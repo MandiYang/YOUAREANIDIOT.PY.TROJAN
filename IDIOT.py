@@ -1,10 +1,10 @@
 # SCRIPT SAYS HI!
 import sys
 
-if sys.version_info[0] ==3 and sys.version_info[1]>=6:
+if sys.version_info[0] ==3 and sys.version_info[1]>=5:
     pass
 else:
-    raise Exception("Must be using Python 3.6 or newer, but not python 4")
+    raise Exception("Must be using Python 3.5 or newer, but not python 4")
 
 import tkinter as tk
 import random

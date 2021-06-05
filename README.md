@@ -2,6 +2,6 @@ This repository is a unofficial python3 version of youareanidiot trojan and viru
 
 In the image folder there is the image used for the virus or trojan.
 
-Requires python3.6 or newer!
+Requires python3.5 or newer!
 
 ### THE CODE IS ONLY FOR EDUCATION PURPOSE, DO NOT USE THIS FOR HARM.
