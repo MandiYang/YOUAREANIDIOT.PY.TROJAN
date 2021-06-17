@@ -1,5 +1,5 @@
 # SCRIPT SAYS HI!
-import sys
+import sys, site
 
 if sys.version_info[0] ==3 and sys.version_info[1]>=5:
     pass
@@ -19,6 +19,9 @@ except ImportError:
     else:
         import pip._internal
         pip._internal.main(['install', '--user', 'pillow'])
+        
+    from importlib import reload
+    reload(site)
     from PIL import ImageTk, Image
 
 from io import BytesIO
