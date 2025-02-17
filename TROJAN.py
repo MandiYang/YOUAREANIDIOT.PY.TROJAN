@@ -37,7 +37,7 @@ response = request.urlopen(URL, context=ctx)
 img_data = response.read()
 h=BytesIO(img_data)
 open_i=Image.open(h)
-imagen = open_i.resize((400, 400), Image.ANTIALIAS)
+imagen = open_i.resize((400, 400), Image.LANCZOS)
 image = ImageTk.PhotoImage(imagen)
 
 def startInfiniteLoop():
